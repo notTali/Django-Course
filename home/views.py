@@ -3,4 +3,4 @@ from django.http import HttpRequest, HttpResponse
 # Create your views here.
 
 def home(request):
-    return HttpResponse("Hello Dajngo world!")
+    return render(request, 'home/welcome.html', {}) #brackets for passing value to the view
