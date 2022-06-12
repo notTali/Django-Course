@@ -1,6 +1,11 @@
 from django.shortcuts import render
 from .models import notes
 from django.views.generic import TemplateView
+from django.views.generic import ListView
+
+class NotesListVoew(ListView):
+    model = notes # model that we're getting notes from
+    context_object_name = "notes"
 
 # class HomeView(TemplateView):
 
@@ -8,9 +13,9 @@ from django.views.generic import TemplateView
 
 # Create your views here.
 
-def list(request):
-    all_notes = notes.objects.all()
-    return render(request, "notes/notes_list.html", {'notes': all_notes})
+# def list(request):
+#     all_notes = notes.objects.all()
+#     return render(request, "notes/notes_list.html", {'notes': all_notes})
 
 
 def detail(request, pk):
