@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('notes/', views.list),
-    path('detail', views.detail),
+    path('notes/<int:pk>', views.detail), #receives an int value as a primary key
 ]
