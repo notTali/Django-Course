@@ -1,5 +1,10 @@
 from django.shortcuts import render
 from .models import notes
+from django.views.generic import TemplateView
+
+# class HomeView(TemplateView):
+
+#     extra_context = 
 
 # Create your views here.
 
