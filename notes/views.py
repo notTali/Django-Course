@@ -5,4 +5,4 @@ from .models import notes
 
 def list(request):
     all_notes = notes.objects.all()
-    return render(request, "notes_list.html", {'notes': all_notes})
+    return render(request, "notes/notes_list.html", {'notes': all_notes})
