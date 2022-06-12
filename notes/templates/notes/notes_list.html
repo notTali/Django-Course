@@ -7,6 +7,12 @@
     <title>Smartnotes</title>
   </head>
   <body>
-    <p>{{notes}}</p>
+    <h1>All notes:</h1>
+
+    <ul>
+      {% for note in notes%}
+      <li>{{note.title}}</li>
+      {% endfor %}
+    </ul>
   </body>
 </html>
